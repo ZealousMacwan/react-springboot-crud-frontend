@@ -4,12 +4,12 @@ ENV NODE_ENV production
 WORKDIR /app
 # Cache and Install dependencies
 COPY package.json .
-COPY yarn.lock .
-RUN yarn install --production
+#COPY yarn.lock .
+RUN npm install --production
 # Copy app files
 COPY . .
 # Build the app
-RUN yarn build
+RUN npm build
 
 # Bundle static assets with nginx
 FROM nginx:stable-alpine as production
