@@ -50,7 +50,7 @@ class ClientList extends Component {
             <div>
                 <AppNavbar/>
                 <Container fluid>
-                    <div className="float-right">
+                    <div className="float-end">
                         <Button color="success" tag={Link} to="/clients/new">Add Client</Button>
                     </div>
                     <h3>Clients</h3>
